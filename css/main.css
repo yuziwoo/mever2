@@ -87,6 +87,7 @@
 
 .section_01 .how_much {
   position: absolute;
+  display: none;
 }
 
 @media screen and (max-width: 1300px) {
