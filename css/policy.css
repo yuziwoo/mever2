@@ -1,0 +1,125 @@
+main {
+  padding: 200px 15px;
+  width: calc(100%);
+  max-width: 1600px;
+  margin: auto;
+}
+
+main .head {
+  padding-bottom: 20px;
+}
+
+main .head h1 {
+  font-size: 60px;
+}
+
+main .head2 {
+  padding-bottom: 100px;
+}
+
+main .head2 span {
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+main .content_wrap .list .title {
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 20px;
+  cursor: pointer;
+}
+
+main .content_wrap .list .title h1 {
+  font-size: 22px;
+  transition: color 0.5s;
+  color: rgba(255, 255, 255, 1);
+}
+
+main .content_wrap .list:hover .title h1 {
+  color: gold;
+}
+
+main .content_wrap .list .text {
+  font-size: 16px;
+  padding: 40px 20px;
+  display: none;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: height 0.4s;
+}
+
+main .content_wrap .list_on .title h1 {
+  color: gold;
+}
+
+
+main .content_wrap .list .text span {
+  display: block;
+  padding: 0px 0px 5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+main .content_wrap .list .strong span {
+  color: rgba(255, 255, 255, 1);
+}
+
+main .content_wrap .list .small_divide li {
+  padding: 15px 0px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+main .content_wrap .list .small_list {
+  padding: 10px 0px 10px 40px;
+  list-style: circle;
+}
+
+main .content_wrap .list .small_list li {
+  list-style: circle;
+  padding: 5px 0px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+main .content_wrap .list_on .text {
+  display: block;
+  animation: opacity 1s 0.1s forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+@media screen and (max-width: 860px) {
+  main {
+    padding: 110px 15px;
+  }
+  main .head h1 {
+    font-size: 40px;
+  }
+  main .head2 {
+    padding-bottom: 60px;
+  }
+  main .head2 span {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  main .content_wrap .list .title {
+    padding: 20px 10px;
+  }
+  main .content_wrap .list .title h1 {
+    font-size: 18px;
+  }
+  main .content_wrap .list .text {
+    font-size: 13px;
+    padding: 30px 10px;
+  }
+}

@@ -1,0 +1,428 @@
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Default */
+:root {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+@media screen and (max-width: 1300px) {:root {font-size: 15px;}}
+@media screen and (max-width: 1100px) {:root {font-size: 14px;}}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, header, footer, div, nav, section, ul, li, figure, img, video, iframe, h1, h2, h3, h4, h5, h6, p, span, strong, b, a, main, aside, button, input {
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgba(10, 10, 10, 1);
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  font-size: 1rem;
+  font-weight: 400;
+  z-index: 500;
+}
+
+header .left {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .left .logo {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 40px;
+}
+
+header .left .logo figure img {
+  transform: translateY(3px);
+  height: 32px;
+}
+
+header .left .gnb ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .left .gnb ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+}
+
+header .left .gnb ul li a {
+  transition: color 0.4s;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+header .left .gnb ul li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+header .left .gnb ul .active a {
+  color: rgba(255, 255, 255, 1);
+}
+
+header .left .gnb ul .active a::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background: white;
+  display: block;
+  position: absolute;
+  animation: header_list 1s forwards;
+}
+
+@keyframes header_list {
+  from {
+    width: 0px;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+header .right {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .right .right_pc {
+  height: 100%;
+}
+
+header .right .right_pc ul {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .right .right_pc ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .right .right_pc ul li:first-child a span {
+  position: relative;
+  color: gold;
+}
+
+header .right .right_pc ul li:first-child a span::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background: gold;
+  display: block;
+  position: absolute;
+  transition: width 0.4s, left 0.4s;
+}
+
+header .right .right_pc ul li:first-child a:hover span::after {
+  width: 100%;
+  left: 0px;
+}
+
+header .right .right_pc ul .active a span::after {
+  animation: header_list 1s forwards;
+}
+
+header .right .right_pc ul .header_download {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+header .right .right_pc ul .header_download ul li a span {
+  color: white;
+}
+
+header .right .right_pc ul .header_download::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 18px;
+  background: white;
+  left: 0px;
+  top: calc(50% - 7px);
+}
+
+header .right .right_pc ul li:last-child span {
+  position: relative;
+  cursor: pointer;
+}
+
+header .right .right_pc ul li {
+  height: 100%;
+  position: relative;
+}
+
+header .right .right_pc ul li .header_dropdown {
+  position: absolute;
+  width: 107px;
+  left: calc(50% - 53.5px);
+  top: 80%;
+  display: none;
+  height: 100%;
+}
+
+header .right .right_pc ul li .header_dropdown_on {
+  display: block;
+}
+
+header .right .right_pc ul li .header_dropdown ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .right .right_pc ul li .header_dropdown ul li {
+  padding-top: 8px;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+header .right .right_pc ul li .header_dropdown_on ul li:first-child {
+  animation: header_dropdown 0.4s forwards;
+}
+
+header .right .right_pc ul li .header_dropdown_on ul li:last-child {
+  animation: header_dropdown 0.4s 0.2s forwards;
+}
+
+@keyframes header_dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+header .right .right_pc ul li .header_dropdown ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .right .right_pc ul li .header_dropdown ul li a span::after {
+  display: none;
+}
+
+header .right .right_pc ul li .header_dropdown ul li a figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  transform: translateY(1px);
+}
+
+header .right .right_pc ul li .header_dropdown ul li a figure img {
+  width: 30px;
+}
+
+header .right .right_pc ul li .header_dropdown ul li a {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+header .right .right_pc ul li .header_dropdown ul li a:hover {
+  opacity: 0.6;
+}
+
+header .right .right_mobile {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .right .right_mobile .hamb_button_wrap {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 501;
+}
+
+header .right .right_mobile .hamb_button_wrap .hamb_button {
+  width: 25px;
+  height: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+}
+
+header .right .right_mobile .hamb_button_wrap .hamb_button span {
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  background: white;
+  display: block;
+  transition: all 0.4s;
+}
+
+header .right .right_mobile .hamb_button_wrap .hamb_button span:first-child {
+  transform: translateY(-8px);
+}
+
+header .right .right_mobile .hamb_button_wrap .hamb_button span:nth-child(2) {
+  width: 17.5px;
+}
+
+header .right .right_mobile .hamb_button_wrap .hamb_button span:last-child {
+  transform: translateY(8px);
+  width: 8.75px;
+}
+
+header .right .right_mobile_on .hamb_button_wrap .hamb_button span:first-child {
+  transform: translateY(0px) rotate(45deg);
+}
+
+header .right .right_mobile_on .hamb_button_wrap .hamb_button span:nth-child(2) {
+  opacity: 0;
+}
+
+header .right .right_mobile_on .hamb_button_wrap .hamb_button span:last-child {
+  transform: translateY(0px) rotate(-45deg);
+  width: 25px;
+}
+
+header .right .right_mobile .hamb_menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background: rgba(255, 255, 255, 1);
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+header .right .right_mobile_on .hamb_menu {
+  display: flex;
+  animation: header_hamb 0.5s forwards;
+}
+
+@keyframes header_hamb {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  header {
+    padding: 0px 40px;
+  }
+  header .left .logo {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    padding: 0px 30px;
+    height: 64px;
+  }
+  header .left .gnb ul li {
+    padding: 0px 8px;
+  }
+  header .right .right_pc ul .header_download {
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  header .right .right_pc ul .header_download::after {
+    height: 15px;
+    top: calc(50% - 6px);
+  }
+  header .right .right_pc ul li .header_dropdown {
+    position: absolute;
+    width: 100px;
+    left: calc(50% - 50px);
+    top: 80%;
+  }
+  header .right .right_pc ul li .header_dropdown ul li {
+    padding-top: 6px;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  header .right .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header .left .pc {
+    display: none;
+  }
+  header .right .pc {
+    display: none;
+  }
+  header {
+    padding: 0px 15px;
+    height: 54px;
+  }
+  header .left .logo figure img {
+    transform: translateY(2px);
+    height: 26px;
+  }
+}
