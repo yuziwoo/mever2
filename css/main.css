@@ -31,12 +31,6 @@
   height: 100vmax;
 }
 
-@media screen and (max-width: 860px) {
-  .section_01 video {
-    display: none;
-  }
-}
-
 .section_01 .text {
   position: absolute;
   top: calc(50% - 143.2px);
@@ -89,6 +83,10 @@
 
 .section_01 .text .download a figure img {
   height: 45px;
+}
+
+.section_01 .how_much {
+  position: absolute;
 }
 
 @media screen and (max-width: 1300px) {
