@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/main/main.jpg");
+  background-image: url("../img/main/main.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -135,6 +135,9 @@
   }
   .section_01 .text .download a {
     margin-right: 10px;
+  }
+  .section_01 video {
+    display: none;
   }
 }
 
