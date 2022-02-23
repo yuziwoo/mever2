@@ -9,10 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/main/main.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
   overflow: hidden;
   animation: opacity 1.5s 0.5s forwards;
   opacity: 0;
@@ -28,6 +24,7 @@
 }
 
 .section_01 video {
+  position: absolute;
   height: 100vmax;
 }
 
@@ -137,11 +134,10 @@
   .section_01 .text .download a {
     margin-right: 10px;
   }
-  .section_01 video {
-    display: none;
-  }
 }
 
+
+/*  지워도 됨요 */
 main {
   width: 100%;
   height: 300vh;
@@ -149,10 +145,5 @@ main {
 
 .section_02 {
   width: 100%;
-  height: 100vh;
-  background-image: url("../img/main/section_02.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
   position: relative;
 }

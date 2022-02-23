@@ -27,6 +27,9 @@ window.addEventListener("DOMContentLoaded", (e) => {
           <a href="#">협력개발</a>
         </li>
         <li class="header_list">
+          <a href="#">인재채용</a>
+        </li>
+        <li class="header_list">
           <a href="#">고객지원</a>
         </li>
       </ul>
