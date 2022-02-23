@@ -107,7 +107,11 @@ window.addEventListener("DOMContentLoaded", (e) => {
   // header active code
   let header_list = document.getElementsByClassName("header_list");
   let main = document.getElementsByTagName("main")[0];
-  let page_value = main.getAttributeNode("class").value.toString();
+  let page_value = main.getAttributeNode("class");
+
+  if (page_value) {
+    page_value = main.getAttributeNode("class").value.toString();
+  }
 
   switch (page_value) {
     case "sub01" : header_list[0].classList.add("active");

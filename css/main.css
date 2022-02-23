@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 .section_01_wrap {
   transition: opacity 0.2s;
 }
@@ -140,10 +144,201 @@
 /*  지워도 됨요 */
 main {
   width: 100%;
-  height: 300vh;
+  height: 500vh;
 }
 
 .section_02 {
   width: 100%;
+  height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0a0b0d;
+  overflow: hidden;
+}
+
+.section_02 .section_02bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../img/main/section_02.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1);
+}
+
+.section_02 .title {
+  padding-bottom: 40px;
+  position: relative;
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.section_02_on .title {
+  opacity: 1;
+}
+
+.section_02 .title h1{
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.section_02 .how_much {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 50px;
+  padding: 100px 110px;
+  position: relative;
+  transform: scale(0.001);
+  opacity: 0;
+  transition: transform 1.2s 0.5s, opacity 1.2s 0.5s;
+}
+
+.section_02_on .how_much {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section_02 .how_much .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section_02 .how_much .list .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  transition: transform 0.4s;
+}
+
+.section_02 .how_much .list .content:hover{
+  transform: scale(1.2);
+}
+
+.section_02 .how_much .list .content .icon figure img {
+  width: 120px;
+}
+
+.section_02 .how_much .list .content .value {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 0px 0px;
+  flex-wrap: wrap;
+}
+
+.section_02 .how_much .list .content .value .count {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.section_02 .how_much .list .content .value .count span {
+  transform: translateY(-900%);
+}
+
+.section_02 .how_much .list .content .value .count:nth-child(1) span {
+  transition: transform 2.4s 1.7s ease-out;
+}
+.section_02 .how_much .list .content .value .count:nth-child(2) span {
+  transition: transform 2.1s 1.7s ease-out;
+}
+.section_02 .how_much .list .content .value .count:nth-child(3) span {
+  transition: transform 1.8s 1.7s ease-out;
+}
+.section_02 .how_much .list .content .value .count:nth-child(4) span {
+  transition: transform 1.5s 1.7s ease-out;
+}
+
+.section_02_on .how_much .list .content .value .count span {
+  transform: translateY(0px);
+}
+
+.section_02 .how_much .list .content .value span {
+  color: rgba(30, 30, 30, 1);
+  line-height: 1.2;
+  font-size: 30px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+.section_02 .how_much .list .content .value .name {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1300px) {
+  .section_02 .title {
+    padding-bottom: 30px;
+  }
+  .section_02 .title h1{
+    font-size: 32px;
+  }
+  .section_02 .how_much {
+    width: calc(100% - 80px);
+    padding: 80px 90px;
+  }
+  .section_02 .how_much .list .content .icon figure img {
+    width: 100px;
+  }
+  .section_02 .how_much .list .content .value {
+    padding: 30px 0px 0px;
+  }
+  .section_02 .how_much .list .content .value span {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .section_02 .how_much .list .content .value .name {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .section_02 .title h1{
+    font-size: 28px;
+  }
+  .section_02 .how_much {
+    width: calc(100% - 60px);
+    padding: 40px 0px 0px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .section_02 .how_much .list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .section_02 .how_much .list .content {
+    width: 50%;
+    padding-bottom: 40px;
+  }
+  .section_02 .how_much .list .content .icon figure img {
+    width: 150px;
+  }
+  .section_02 .how_much .list .content .value span {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+  .section_02 .how_much .list .content .value .name {
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+
 }
