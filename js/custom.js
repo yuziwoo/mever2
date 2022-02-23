@@ -18,10 +18,10 @@ window.addEventListener("DOMContentLoaded", (e) => {
           <a href="#">셀럽·컨텐츠</a>
         </li>
         <li class="header_list">
-          <a href="#">브랜드</a>
+          <a href="#">기업·브랜드</a>
         </li>
         <li class="header_list">
-          <a href="#">투자자</a>
+          <a href="#">투자</a>
         </li>
         <li class="header_list">
           <a href="#">협력개발</a>
