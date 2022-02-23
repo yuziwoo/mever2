@@ -24,6 +24,8 @@ body, header, footer, div, nav, section, ul, li, figure, img, video, iframe, h1,
   box-sizing: border-box;
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 body {

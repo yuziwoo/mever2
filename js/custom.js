@@ -11,26 +11,26 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
     <div class="gnb pc">
       <ul>
-        <li class="header_list active">
-          <a href="#">메버란?</a>
+        <li class="header_list">
+          <a href="sub01_mever.html">메버란?</a>
         </li>
         <li class="header_list">
-          <a href="#">셀럽·컨텐츠</a>
+          <a href="sub02_celebrity.html">셀럽·컨텐츠</a>
         </li>
         <li class="header_list">
-          <a href="#">기업·브랜드</a>
+          <a href="sub03_brand.html">기업·브랜드</a>
         </li>
         <li class="header_list">
-          <a href="#">투자</a>
+          <a href="sub04_invest.html">투자</a>
         </li>
         <li class="header_list">
-          <a href="#">협력개발</a>
+          <a href="sub05_cooperate.html">협력개발</a>
         </li>
         <li class="header_list">
-          <a href="#">인재채용</a>
+          <a href="sub06_recruit.html">인재채용</a>
         </li>
         <li class="header_list">
-          <a href="#">고객지원</a>
+          <a href="sub07_cs.html">고객지원</a>
         </li>
       </ul>
     </div>
@@ -102,4 +102,28 @@ window.addEventListener("DOMContentLoaded", (e) => {
   hamb_button.addEventListener("click", () => {
     right_mobile.classList.toggle("right_mobile_on");
   })
+
+
+  // header active code
+  let header_list = document.getElementsByClassName("header_list");
+  let main = document.getElementsByTagName("main")[0];
+  let page_value = main.getAttributeNode("class").value.toString();
+
+  switch (page_value) {
+    case "sub01" : header_list[0].classList.add("active");
+    break;
+    case "sub02" : header_list[1].classList.add("active");
+    break;
+    case "sub03" : header_list[2].classList.add("active");
+    break;
+    case "sub04" : header_list[3].classList.add("active");
+    break;
+    case "sub05" : header_list[4].classList.add("active");
+    break;
+    case "sub06" : header_list[5].classList.add("active");
+    break;
+    case "sub07" : header_list[6].classList.add("active");
+    break;
+  }
+
 })
