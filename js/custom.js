@@ -170,49 +170,49 @@ window.addEventListener("DOMContentLoaded", (e) => {
     <div class="sns">
       <ul>
         <li>
-          <a href="#">
+          <a href="https://www.youtube.com/channel/UCXHaChrER0XYPrR43S7mx5A" target="_blank">
             <figure>
               <img src="img/sns/youtube.png" alt="https://www.flaticon.com/kr/ 아이콘 제작자: Freepik - Flaticon">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.tiktok.com/@official_mever" target="_blank">
             <figure>
               <img src="img/sns/tiktok.png" alt="https://www.flaticon.com/kr/ 아이콘 제작자: Freepik - Flaticon">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" target="_blank">
             <figure>
               <img src="img/sns/instagram.png" alt="https://www.flaticon.com/kr/ 아이콘 제작자: Freepik - Flaticon">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.facebook.com/MeVer-101513759130970" target="_blank">
             <figure>
               <img src="img/sns/facebook.png" alt="https://www.flaticon.com/kr/ 아이콘 제작자: Freepik - Flaticon">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://blog.naver.com/mevershop" target="_blank">
             <figure>
               <img src="img/sns/blog.png" alt="네이버 블로그">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://pf.kakao.com/_WgxmIs" target="_blank">
             <figure>
               <img src="img/sns/kakaotalk.png" alt="카카오톡">
             </figure>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://smartstore.naver.com/79market1/" target="_blank">
             <figure>
               <img src="img/sns/store.png" alt="네이버 스마트스토어">
             </figure>
